@@ -1,0 +1,37 @@
+<h3><u>Article Detail Info</u> </h3>
+
+
+<table>
+	<tr>
+		<td>Article Title:</td>
+		<td></td>
+		<td><%= @article.title %>   </td>
+	</tr>
+	<tr>
+		<td>Year Published:</td>
+		<td></td>
+		<td><%= @article.article_year %>   </td>
+	</tr>	
+
+	<tr>
+		<td>Author Name</td>
+		<td></td>
+		<td><%= "#{@article.author_last_name}, #{@article.author_first_name}"%></td>
+	</tr>	
+
+	<tr>
+		<td>Publication Name</td>
+		<td></td>
+		<td><%= @article.pub_name %>   </td>
+	</tr>
+
+	<tr>	
+		<td>Article Description</td>
+		<td></td>
+		<td><%= @article.body %>   </td>	
+	</tr>
+
+</table>
+<br>
+<%= link_to "Home", root_path %>
+

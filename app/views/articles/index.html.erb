@@ -1,0 +1,27 @@
+<h1>Articles#index</h1>
+
+<table>
+	<tr >
+		<th><u>Article Title</u></th>
+		<th>&nbsp;&nbsp;&nbsp;</th>
+		<th><u>Author</u></th>
+		<th>&nbsp;&nbsp;&nbsp;</th>
+		<th><u>Year Published</u></th>
+		<th>&nbsp;&nbsp;&nbsp;</th>
+		<th><u>Article Description Snippet</u></th>
+	</tr>
+
+	<% @articles.each do |article| %>
+	<tr>
+		<td><%= link_to(article.title, article_path(article)) %> </td>
+		<td></td>
+		<td><%="#{article.author_last_name}, #{article.author_first_name}" %></td>
+		<td></td>
+		<td align="center"> <%= article.article_year %>  </td>	
+		<td></td>
+		<td style='padding:5px 5px 5px 25px'> <%= article.body.slice(0..40) %> ... </td>	
+
+	</tr>
+	<%end%>		 
+</table>
+
